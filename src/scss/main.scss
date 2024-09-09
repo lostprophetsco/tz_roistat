@@ -1,0 +1,24 @@
+@use './theme/theme' as theme;
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=cyrillic-ext';
+@import 'mixins';
+@import '../../node_modules/reset-css/sass/reset';
+@import './theme/core';
+@import './theme/theme';
+@import 'components/sections';
+
+// @import 'components';
+
+:root {
+  @include theme.grid-settings;
+  @include theme.theme-default;
+  @include theme.fonts-family;
+  @include theme.fonts-size;
+  @include theme.fonts-weight;
+  @include theme.fonts-height;
+  @include theme.indents;
+  @include theme.radius;
+  @include theme.transition-time;
+  @include theme.transition-easing;
+  @include theme.shadow;
+  @include theme.blur;
+}
