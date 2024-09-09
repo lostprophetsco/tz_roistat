@@ -37,7 +37,7 @@ $break-xxl: 1600px;
 }
 
 @mixin grid-settings() {
-  --container: 100%;
+  --container: calc(100% - var(--fields) * 2);
   --debug-container: '100%';
   --fields: 20px;
   --debug-fields: '16px';
@@ -46,7 +46,6 @@ $break-xxl: 1600px;
   --debug-breakpoint: 'null';
 
   @include sm {
-    --container: 100%;
     --debug-container: '100%';
     --debug-breakpoint: 'sm';
     --fields: 20px;
@@ -56,20 +55,17 @@ $break-xxl: 1600px;
   }
 
   @include md {
-    --container: 100%;
     --debug-container: '100%';
     --debug-breakpoint: 'md';
   }
 
   @include lg {
-    --container: 100%;
     --debug-container: '100%';
     --debug-breakpoint: 'lg';
     --fields: 32px;
   }
 
   @include xl {
-    --container: 100%;
     --debug-container: '100%';
     --debug-breakpoint: 'xl';
     --fields: 40px;
@@ -79,7 +75,7 @@ $break-xxl: 1600px;
   }
 
   @include xxl {
-    --container: 1600px;
+    --fields: 40px;
     --debug-container: '1600px';
     --debug-breakpoint: 'xxl';
   }

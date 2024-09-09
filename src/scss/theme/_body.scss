@@ -5,8 +5,11 @@
 
 html,
 body {
-  scrollbar-gutter: stable;
+  // scrollbar-gutter: stable;
 }
+
+$body-bg: url("../../images/css/body-bg.png");
+$body-webp: url("../../images/css/body-bg.webp");
 
 body {
   min-width: 320px;
@@ -16,7 +19,9 @@ body {
   font-weight: 400;
   line-height: 135%;
   background-color: var(--color-body-bg);
-  background-image: url("../../images/css/body-bg.png");
+  background-image: $body-bg;
+  background-image: image-set(
+                  $body-bg type('image/png'), $body-webp type('image/webp'));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

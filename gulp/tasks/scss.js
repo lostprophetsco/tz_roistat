@@ -17,10 +17,10 @@ import { logger } from '../config/logger.js';
 const sass = gulpSass(dartSass);
 
 const scss = (isBuild, serverInstance) => {
-  const webpConfig = {
-    webpClass: '.webp',
-    noWebpClass: '.no-webp',
-  };
+  // const webpConfig = {
+  //   webpClass: '.webp',
+  //   noWebpClass: '.no-webp',
+  // };
 
   return (
     gulp
@@ -33,14 +33,14 @@ const scss = (isBuild, serverInstance) => {
       .pipe(plugins.replace(/@img\//g, '../images/'))
       .pipe(plugins.replace(/"(..).*\/fonts\//g, '"../fonts/'))
 
-      .pipe(plugins.if(isBuild, webpCss(webpConfig)))
+      //.pipe(plugins.if(isBuild, webpCss(webpConfig)))
       .pipe(
         plugins.if(
           isBuild,
           postcss([
             autoprefixer(),
-            postcssPresetEnv(),
-            postcssGroupMedia({ sort: 'mobile-first' }),
+            // postcssPresetEnv(),
+            // postcssGroupMedia({ sort: 'mobile-first' }),
           ]),
         ),
       )

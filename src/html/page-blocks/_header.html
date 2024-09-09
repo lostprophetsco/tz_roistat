@@ -1,5 +1,27 @@
 <header class="header">
-  <div class="header__logo">
-    <a href="/"><img src="@img/logo.svg" alt="logo" /> </a>
+  <div class="container header__container">
+    <div class="header__logo">
+      <a href="/" class="header__logo-link">
+        <img src="@img/logo.svg" alt="logo" class="header__logo-img" width="112" height="48" />
+      </a>
+    </div>
+
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <a href="#" class="header__menu-link">Наши предложения</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#" class="header__menu-link">Цены</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__hamburger">
+      <button class="header__hamburger-btn">
+        <span class="header__hamburger-span"></span>
+        <span class="header__hamburger-span"></span>
+      </button>
+    </div>
   </div>
 </header>
