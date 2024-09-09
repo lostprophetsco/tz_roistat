@@ -1,12 +1,9 @@
 @use './theme/theme' as theme;
-@import 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=cyrillic-ext';
 @import 'mixins';
 @import '../../node_modules/reset-css/sass/reset';
 @import './theme/core';
 @import './theme/theme';
 @import 'components/sections';
-
-// @import 'components';
 
 :root {
   @include theme.grid-settings;
@@ -21,4 +18,11 @@
   @include theme.transition-easing;
   @include theme.shadow;
   @include theme.blur;
+
+  --main-font-family: 'Unbounded', 'system-ui', sans-serif;
+  --color-default-text: #E0EAFF;
+  --color-white: #fff;
+  --color-purple: #FE64FA;
+  --color-body-bg: #030014;
+
 }

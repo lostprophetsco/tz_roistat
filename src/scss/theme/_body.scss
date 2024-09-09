@@ -10,9 +10,16 @@ body {
 
 body {
   min-width: 320px;
+  min-height: 100vh;
   font-family: var(--main-font-family, system-ui), sans-serif;
   font-size: 16px;
+  font-weight: 400;
   line-height: 135%;
+  background-color: var(--color-body-bg);
+  background-image: url("../../images/css/body-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizespeed;
