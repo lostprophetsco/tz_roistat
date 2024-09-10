@@ -1,0 +1,48 @@
+<div class="modal">
+  <div class="modal__overlay"></div>
+
+  <div class="modal__content">
+    <div class="modal__header">
+      Регистрация
+
+      <button class="modal__close" type="button">
+        <img src="@img/modal-close.svg" alt="close" width="32" height="32" />
+      </button>
+    </div>
+
+    <div class="modal__body">
+      <form action="send.php" method="get" class="modal__form">
+        <label class="input-default">
+          <span class="input-default__label">Имя</span>
+          <input type="text" name="name" class="input-default__input" required />
+        </label>
+
+        <label class="input-default">
+          <span class="input-default__label">Сайт компании</span>
+          <input type="email" name="site" class="input-default__input" required />
+        </label>
+
+        <label class="input-default">
+          <span class="input-default__label">Телефон</span>
+          <input type="email" name="phone" class="input-default__input" required />
+        </label>
+
+        <div class="modal__footer">
+          <button class="button-default button-default--center" type="submit">Получить код</button>
+
+          <div class="modal__footer-agree">
+            <div class="checkbox-default">
+              <input type="checkbox" name="agree" id="agree" class="checkbox-default__input" />
+            </div>
+
+            <label for="agree" class="checkbox-default__label">
+              Отправляя сведения через электронную форму, вы даете согласие на обработку
+              персональных данных, в том числе сбор, хранение и передачу третьим лицам
+              представленной вами информации на условиях Политики обработки персональных данных.
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
