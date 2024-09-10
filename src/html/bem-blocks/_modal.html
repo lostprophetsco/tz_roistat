@@ -13,18 +13,28 @@
     <div class="modal__body">
       <form action="send.php" method="get" class="modal__form">
         <label class="input-default">
-          <input type="text" name="name" class="input-default__input" required />
+          <input
+            type="text"
+            name="name"
+            class="input-default__input"
+            required
+            pattern="[а-яА-ЯёЁA-Za-z]+"
+          />
           <span class="input-default__label">Имя</span>
+          <span class="input-default__error"
+            >*пожалуйста, используйте только буквы в поле "Имя"
+          </span>
         </label>
 
         <label class="input-default">
-          <input type="email" name="site" class="input-default__input" required />
+          <input type="text" name="site" class="input-default__input" required />
           <span class="input-default__label">Сайт компании</span>
         </label>
 
         <label class="input-default">
-          <input type="email" name="phone" class="input-default__input" required />
+          <input type="text" name="phone" class="input-default__input" required pattern="[0-9+]+" />
           <span class="input-default__label">Телефон</span>
+          <span class="input-default__error">*только цифры и + </span>
         </label>
 
         <div class="modal__footer">
@@ -35,7 +45,7 @@
               <input type="checkbox" name="agree" id="agree" class="checkbox-default__input" />
             </div>
 
-            <label for="agree" class="checkbox-default__label">
+            <label for="agree" class="modal__footer-agree-label">
               Отправляя сведения через электронную форму, вы даете согласие на обработку
               персональных данных, в том числе сбор, хранение и передачу третьим лицам
               представленной вами информации на условиях Политики обработки персональных данных.

@@ -1,0 +1,49 @@
+.checkbox-default {
+	$this: &;
+
+	&__input {
+		position: relative;
+		width: 24px;
+		height: 24px;
+		appearance: none;
+		cursor: pointer;
+		background: transparent;
+		border: 1px var(--color-modal-text) solid;
+		border-radius: 4px;
+		transition: all 0.3s ease-in-out;
+
+		// .checkbox-default__input:before, .checkbox-default__input:after
+		&::before, &::after {
+			position: absolute;
+			height: 2px;
+			visibility: hidden;
+			content: '';
+			background-color: var(--color-blue);
+			opacity: 0;
+		}
+
+		// .checkbox-default__input:checked
+		&:checked {
+			border: 1px var(--color-blue) solid;
+
+			&::before, &::after {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			&::after {
+				top: 12px;
+				left: 2px;
+				width: 8px;
+				transform: rotateZ(45deg);
+			}
+
+			&::before {
+				top: 10px;
+				left: 6px;
+				width: 16px;
+				transform: rotateZ(-45deg);
+			}
+		}
+	}
+}

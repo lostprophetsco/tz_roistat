@@ -64,5 +64,24 @@
       font-size: 14px;
       transform: translateY(-26px);
     }
+
+    // .input-default--filled .input-default__input:invalid ~ .input-default__error
+    #{$this}__input:invalid ~ #{$this}__error {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  // .input-default__error
+  &__error {
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-pink);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
   }
 }
