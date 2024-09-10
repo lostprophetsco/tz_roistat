@@ -11,7 +11,7 @@
     </div>
 
     <div class="modal__body">
-      <form action="send.php" method="get" class="modal__form">
+      <form action="./static/send.php" method="post" class="modal__form">
         <label class="input-default">
           <input
             type="text"
@@ -38,7 +38,9 @@
         </label>
 
         <div class="modal__footer">
-          <button class="button-default button-default--center" type="submit">Получить код</button>
+          <button class="button-default button-default--center" name="modal-submit" type="submit">
+            Получить код
+          </button>
 
           <div class="modal__footer-agree">
             <div class="checkbox-default">
