@@ -9,6 +9,9 @@
 	width: 100%;
 	height: 100vh;
 	padding: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
 
 	// .modal__overlay
 	&__overlay {
@@ -83,5 +86,11 @@
 			color: var(--color-modal-text);
 			cursor: pointer;
 		}
+	}
+
+	// .modal--active
+	&--active {
+		visibility: visible;
+		opacity: 1;
 	}
 }

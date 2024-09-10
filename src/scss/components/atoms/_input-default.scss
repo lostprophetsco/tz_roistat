@@ -1,0 +1,68 @@
+.input-default {
+  $this: &;
+
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  font-family: var(--main-font-family, system-ui), sans-serif;
+  background: linear-gradient(
+    129.19deg,
+    rgb(250 250 250 / 10%) -0.77%,
+    rgb(164 164 164 / 0%) 140.72%
+  );
+  backdrop-filter: blur(15.7422px);
+  border-radius: 8px;
+  box-shadow: 0 65px 130px -5.078px rgb(0 0 0 / 5%),
+    inset 14.2188px 15.2344px 43.6719px rgb(194 194 194 / 5%);
+
+  // .input-default__label
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #ffffff80;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-50%);
+  }
+
+  // .input-default__input
+  &__input {
+    position: relative;
+    width: 100%;
+    padding: 8px 0;
+    font-family: var(--main-font-family, system-ui), sans-serif;
+    color: var(--color-white);
+    background: transparent;
+    border: none;
+    transform: translateY(10px);
+
+    // .input-default__input:focus
+    // .input-default__input:focus-within,
+    // .input-default__input:active
+    &:focus,
+    &:focus-within,
+    &:active {
+      outline: none;
+
+      // .input-default__input:focus ~ .input-default__label
+      // .input-default__input:focus-within ~ .input-default__label,
+      // .input-default__input:active ~ .input-default__label
+      & ~ #{$this}__label {
+        font-size: 14px;
+        transform: translateY(-26px);
+      }
+    }
+  }
+
+  // .input-default--filled
+  &--filled {
+    // .input-default--filled .input-default__label
+    #{$this}__label {
+      font-size: 14px;
+      transform: translateY(-26px);
+    }
+  }
+}
