@@ -3,7 +3,7 @@
 @import '../../node_modules/reset-css/sass/reset';
 @import './theme/core';
 @import './theme/theme';
-@import 'components/sections';
+@import 'components';
 
 :root {
   @include theme.grid-settings;
@@ -25,5 +25,13 @@
   --color-pink: #FE64FA;
   --color-purple: #8F8FFF;
   --color-body-bg: #030014;
+  --color-blue: #8F8FFF;
+  --color-light-blue: #A3A3FF;
+  --color-deep-blue: #6464FF;
 
+}
+
+.main {
+  position: relative;
+  z-index: 1;
 }

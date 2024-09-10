@@ -1,0 +1,243 @@
+@use '../../theme/theme' as theme;
+
+.hero {
+	position: relative;
+	min-height: 500px;
+	padding-bottom: 280px;
+	overflow: hidden;
+
+	@include theme.md {
+		min-height: 700px;
+		padding-bottom: 80px;
+	}
+
+	@include theme.xl {
+		padding-bottom: 290px;
+	}
+
+	// .hero .container
+	.container {
+		@include theme.grid(12);
+
+		position: static;
+	}
+
+	// .hero__star-gradient
+	&__star-gradient {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 766px;
+		height: 1398px;
+		background: radial-gradient(50% 50% at 50% 50%, rgb(200 7 218 / 29%) 0%, rgb(239 111 53 / 0%) 100%, rgb(105 54 245 / 0%) 100%);
+		transform: translate(50%, -60%);
+
+		@include theme.md {
+			transform: translate(50%, -50%);
+		}
+	}
+
+	// .hero__star
+	&__star {
+		position: absolute;
+		top: 50px;
+		right: -30px;
+		z-index: 1;
+		display: inline-flex;
+		align-items: flex-start;
+		width: clamp(122px, 20vw, 327px);
+		height: 333px;
+
+		@include theme.md {
+			right: clamp(10px, 5vw, 80px);
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	// .hero__title
+	&__title {
+		position: relative;
+		z-index: 2;
+		grid-column: span 12;
+		margin-top: clamp(150px, 26vw, 220px);
+		font-size: clamp(46px, 12vw, 160px);
+		font-weight: 900;
+		line-height: clamp(56px, 10vw, 176px);
+		text-transform: uppercase;
+
+		// .hero__title::before
+		&::before {
+			position: absolute;
+			top: calc(97% - 12px);
+			left: clamp(110px, 30vw, 200px);
+			width: clamp(101px, 13vw, 179px);
+			max-width: 189px;
+			height: clamp(100px, 10vw, 128px);
+			max-height: 138px;
+			text-indent: 160px;
+			content: '';
+			background-image: url("../../../images/hero-title-label.svg");
+			background-repeat: no-repeat;
+			background-position: top left;
+			background-size: contain;
+
+			@include theme.sm {
+				top: calc(98% - 5px);
+				left: 35%;
+			}
+
+			@include theme.md {
+				top: calc(98% - 5px);
+				left: -3%;
+			}
+
+			@include theme.lg {
+				top: calc(98% - 7px);
+			}
+
+			@include theme.xl {
+				top: calc(92% - 5px);
+			}
+		}
+	}
+
+	// .hero__title-first
+	&__title-first {
+		position: absolute;
+		left: 0;
+		color: var(--color-white);
+		transform: rotateZ(7deg);
+	}
+
+	// .hero__title-second
+	&__title-second {
+		display: block;
+		padding-top: clamp(80px, 20vw, 240px);
+		color: var(--color-pink);
+	}
+
+	// .hero__text
+	&__text {
+		position: relative;
+		z-index: 2;
+		grid-column: span 12;
+		margin-top: 75px;
+		font-size: 16px;
+		line-height: 24px;
+
+		@include theme.sm {
+			grid-column: span 8;
+			margin-top: 60px;
+		}
+
+		@include theme.md {
+			grid-column: 3 / span 6;
+			margin-top: 36px;
+		}
+
+		@include theme.lg {
+			grid-column: 3 / span 5;
+			margin-top: 54px;
+		}
+
+		@include theme.xl {
+			grid-column: 3 / span 4;
+			margin-top: 42px;
+			font-size: 18px;
+			line-height: 27px;
+		}
+
+		// .hero__text-button
+		&-button {
+			display: flex;
+			margin-top: 24px;
+
+
+			@include theme.xl {
+				margin-top: 32px;
+			}
+		}
+	}
+
+	// .hero__description
+	&__description {
+		grid-row: 3 / 4;
+		grid-column: span 12;
+		margin-top: 15px;
+		font-size: 13px;
+		line-height: 17px;
+
+		@include theme.md {
+			grid-column: 7 / span 6;
+			margin-top: 100px;
+		}
+
+		@include theme.lg {
+			grid-column: 8 / span 5;
+		}
+
+		@include theme.xl {
+			display: none;
+		}
+	}
+
+	// .hero__bottom
+	&__bottom {
+		position: absolute;
+		bottom: 22%;
+		z-index: -1;
+		width: 100%;
+		height: auto;
+
+		@include theme.md {
+			bottom: 35%;
+		}
+
+		@include theme.lg {
+			bottom: 30%;
+		}
+
+		@include theme.xl {
+			bottom: 25%;
+		}
+
+		// .hero__bottom-blue
+		&-blue {
+			position: absolute;
+			left: -10%;
+			z-index: 2;
+			width: 120%;
+			height: 88px;
+			background-color: rgb(29 29 29 / 5%);
+			background-image: url('../../../images/black-friday-blue.svg');
+			background-repeat: repeat-x;
+			background-position: center right;
+			backdrop-filter: blur(10px);
+			border: 1px solid;
+			border-image-source: linear-gradient(180deg, #323232 0%, rgb(0 0 0 / 0%) 100%);
+			transform: rotateZ(-12deg);
+		}
+
+		// .hero__bottom-yellow
+		&-yellow {
+			position: absolute;
+			top: 80px;
+			left: -10%;
+			z-index: 1;
+			width: 120%;
+			height: 88px;
+			background-color: rgb(29 29 29 / 5%);
+			background-image: url('../../../images/black-friday-yellow.svg');
+			background-repeat: repeat-x;
+			background-position: center left;
+			backdrop-filter: blur(10px);
+			border: 1px solid;
+			border-image-source: linear-gradient(180deg, #323232 0%, rgb(0 0 0 / 0%) 100%);
+			transform: rotateZ(-5deg)
+		}
+	}
+}

@@ -1,0 +1,54 @@
+.button-default {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 16px 24px;
+	font-family: var(--main-font-family, system-ui), sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	color: var(--color-white);
+	cursor: pointer;
+	background-color: var(--color-blue);
+	border: 1px solid var(--color-blue);
+	border-radius: 16px;
+	transition: all .3s ease-in-out;
+
+	// .button-default:hover,
+	// .button-default:focus,
+	// .button-default:focus-within
+	&:hover,
+	&:focus,
+	&:focus-within{
+		background-color: var(--color-light-blue);
+		border-color: var(--color-blue);
+	}
+
+	// .button-default:active
+	&:active {
+		background-color: var(--color-deep-blue);
+		border-color: var(--color-blue);
+	}
+
+	// .button-default--icon
+	&--icon {
+		gap: 16px;
+		justify-content: space-between;
+	}
+
+	// .button-default--icon .button-default__icon
+	&__icon {
+		display: flex;
+		align-items: center;
+		width: 24px;
+		height: 24px;
+
+		// .button-default--icon .button-default__icon img
+		img {
+			display: block;
+		}
+	}
+}
+
+
