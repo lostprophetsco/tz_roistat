@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" href="favicon.ico" type="image/svg+xml">
+  <link rel="stylesheet" href="css/main.min.css?_v=20241004161430">
+  <title>TZ Roistat</title>
+</head>
+
+  <body>
+    <header class="header">
+  <div class="container header__container">
+    <div class="header__logo">
+      <a href="/" class="header__logo-link">
+        <img src="./images/logo.svg" alt="logo" class="header__logo-img" width="112" height="48">
+      </a>
+    </div>
+
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <a href="#" class="header__menu-link">Наши предложения</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#" class="header__menu-link">Цены</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__hamburger">
+      <button class="header__hamburger-btn">
+        <span class="header__hamburger-span"></span>
+        <span class="header__hamburger-span"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+    <main class="main"><section class="hero">
+  <div class="hero__star-gradient"></div>
+
+  <div class="container">
+    <div class="hero__star">
+      <img src="./images/hero-star.svg" alt="star" width="327" height="333">
+    </div>
+
+    <h1 class="hero__title">
+      <div class="hero__left-line"></div>
+      <div class="hero__right-line"></div>
+
+      <span class="hero__title-first">Черная</span>
+      <span class="hero__title-second">пятница</span>
+    </h1>
+
+    <div class="hero__text">
+      Воспользуйтесь выгодными предложениями от Roistat в ноябре*
+
+      <div class="hero__text-button">
+        <button class="button-default button-default--icon modal__open" type="button">
+          Получить выгоду
+          <i class="button-default__icon">
+            <img src="./images/button-arrow.svg" alt="arrow" width="24" height="16">
+          </i>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero__description">
+      *Акция не распространяется на подключение опций, лимитов, которые были подключены ранее до
+      1.11.2023 Количество предложений ограничено
+    </div>
+  </div>
+
+  <div class="hero__bottom">
+    <div class="hero__bottom-blue"></div>
+
+    <div class="hero__bottom-yellow"></div>
+  </div>
+</section>
+</main>
+
+    <footer class="footer"></footer>
+ <div class="modal">
+  <div class="modal__overlay"></div>
+
+  <div class="modal__content">
+    <div class="modal__header">
+      Регистрация
+
+      <button class="modal__close" type="button">
+        <img src="./images/modal-close.svg" alt="close" width="32" height="32">
+      </button>
+    </div>
+
+    <div class="modal__body">
+      <form action="./static/send.php" method="post" class="modal__form">
+        <label class="input-default">
+          <input type="text" name="name" class="input-default__input" required pattern="[а-яА-ЯёЁA-Za-z]+">
+          <span class="input-default__label">Имя</span>
+          <span class="input-default__error">*пожалуйста, используйте только буквы в поле "Имя"
+          </span>
+        </label>
+
+        <label class="input-default">
+          <input type="text" name="site" class="input-default__input" required>
+          <span class="input-default__label">Сайт компании</span>
+        </label>
+
+        <label class="input-default">
+          <input type="text" name="phone" class="input-default__input" required pattern="[0-9+]+">
+          <span class="input-default__label">Телефон</span>
+          <span class="input-default__error">*только цифры и + </span>
+        </label>
+
+        <div class="modal__footer">
+          <button class="button-default button-default--center" name="modal-submit" type="submit">
+            Получить код
+          </button>
+
+          <div class="modal__footer-agree">
+            <div class="checkbox-default">
+              <input type="checkbox" name="agree" id="agree" class="checkbox-default__input">
+            </div>
+
+            <label for="agree" class="modal__footer-agree-label">
+              Отправляя сведения через электронную форму, вы даете согласие на обработку
+              персональных данных, в том числе сбор, хранение и передачу третьим лицам
+              представленной вами информации на условиях Политики обработки персональных данных.
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <script src="js/main.min.js?_v=20241004161430"></script>
+
+  </body>
+</html>
